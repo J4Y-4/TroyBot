@@ -1,1 +1,54 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TroyBot</title>
+  <style>
+    body { font-family: Arial, text-align: center; padding: 20px; }
+    .option { margin: 10px; padding: 15px; border: 1px solid #ccc; cursor: pointer; }
+    #response { margin-top: 20px; font-style: italic; }
+    #avatar { width: 200px; border-radius: 50%; }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome! I am TroyBot. How can I help you today?</h1>
+  <img id="avatar" src="principal.png" alt="Principal Smith">
+
+  <div class="option" onclick="respond('schedule')">I need help with my schedule</div>
+  <div class="option" onclick="respond('problem')">I want to talk about a problem</div>
+  <div class="option" onclick="respond('recommendation')">I need a recommendation letter</div>
+  <div class="option" onclick="respond('suggestion')">I have a suggestion</div>
+
+  <div id="response"></div>
+
+  <div id="calendar-link" style="margin-top: 30px;">
+    <a href="https://calendly.com/your-link" target="_blank">Schedule a Meeting with Me</a>
+  </div>
+
+  <script>
+    function respond(option) {
+      const responses = {
+        schedule: "No problem! Let's look at your classes and see how I can help.",
+        problem: "I'm here to listen. Want to book a time to chat privately?",
+        recommendation: "Happy to help! Fill out the form and give me a little info about what it's for.",
+        suggestion: "I love hearing your ideas—go ahead and share!"
+      };
+      document.getElementById('response').textContent = responses[option];
+    }
+  </script>
+<form 
+
+action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your name (optional)">
+  <textarea name="message" placeholder="Type your message here..." rows="6"></textarea>
+  <button type="submit">Send to Principal</button>
+</form>
+
+
+
+</body>
+</html>
+
+
+
