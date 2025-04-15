@@ -18,8 +18,9 @@
   <div class="option" onclick="respond('schedule')">I would like to schedule a meeting with you.</div>
   <div class="option" onclick="respond('reportissue')">I would like to report an issue with a peer/coworker.</div>
   <div class="option" onclick="respond('event')">I have a question about a school service </div>
-  <div class="option" onclick="respond('suggestion')">I have a suggestion</div>
-
+  <div class="option" onclick="respond('personal')">I have a personal problem and need your advice.</div>
+  <div class="option" onclick="respond('other')">Other.</div>
+  
   <div id="response"></div>
 
   <div id="calendar-link" style="margin-top: 30px;">
@@ -30,12 +31,15 @@
     function respond(option) {
       const responses = {
         schedule: 
-          <p>No problem! Let's see when I'm available:</p>
+          <p>No problem! Let's see when I'm available, does it work for you?</p>
         <iframe src="https://calendar.google.com/calendar/embed?src=jaydalihaven%40gmail.com&ctz=Asia%2FBangkok" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 ",
-        problem: "I'm here to listen. Want to book a time to chat privately?",
-        recommendation: "Happy to help! Fill out the form and give me a little info about what it's for.",
-        suggestion: "I love hearing your ideas—go ahead and share!"
+        reportissue: "I see! Here is a google form for you to give me the information annonymously or with your name. I will get back to you when I can.",
+        event: "Happy to help! Email me or ask me in person, though I'd suggest for a faster response to check the bulletin email or ask Student Council.",
+        personal: "I am always willing to listen. Please come see me."
+      other: <label for="message">Your Message:</label>
+<textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here..." required></textarea>
+
       };
       document.getElementById('response').textContent = responses[option];
     }
