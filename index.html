@@ -15,9 +15,9 @@
   <h1>Welcome! I am TroyBot. How can I help you today?</h1>
   <img id="avatar" src="DSC_0893.jpeg" alt="Principal Smith">
 
-  <div class="option" onclick="respond('schedule')">I need help with my schedule</div>
-  <div class="option" onclick="respond('problem')">I want to talk about a problem</div>
-  <div class="option" onclick="respond('recommendation')">I need a recommendation letter</div>
+  <div class="option" onclick="respond('schedule')">I would like to schedule a meeting with you.</div>
+  <div class="option" onclick="respond('reportissue')">I would like to report an issue with a peer/coworker.</div>
+  <div class="option" onclick="respond('event')">I have a question about a school service </div>
   <div class="option" onclick="respond('suggestion')">I have a suggestion</div>
 
   <div id="response"></div>
@@ -29,7 +29,10 @@
   <script>
     function respond(option) {
       const responses = {
-        schedule: "No problem! Let's look at your classes and see how I can help.",
+        schedule: 
+          <p>No problem! Let's see when I'm available:</p>
+        <iframe src="https://calendar.google.com/calendar/embed?src=jaydalihaven%40gmail.com&ctz=Asia%2FBangkok" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+",
         problem: "I'm here to listen. Want to book a time to chat privately?",
         recommendation: "Happy to help! Fill out the form and give me a little info about what it's for.",
         suggestion: "I love hearing your ideas—go ahead and share!"
